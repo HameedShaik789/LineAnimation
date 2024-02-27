@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Nunito:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      body {
+        font-family: "Fira Code", monospace;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .main-div {
+        font-size: 50px;
+        font-weight: 900;
+        position: relative;
+      }
+      h1::after {
+        content: "";
+        height: 10px;
+        position: absolute;
+        width: 0%;
+        color: black;
+        background-color: black;
+        bottom: 0;
+        left: 0;
+        /* transition: all 2s ease-in-out; */
+      }
+
+      h1:hover::after {
+        /* width: 100%; */
+        animation-name: anime;
+        animation-duration: 1.2s;
+        /* transform: translateX(100%); */
+      }
+
+      @keyframes anime {
+        0% {
+          width: 0%;
+          left: 0%;
+        }
+        50% {
+          width: 100%;
+          left: 0%;
+        }
+        100% {
+          left: 100%;
+          width: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <h1>Hello World</h1>
+    </div>
+  </body>
+</html>
